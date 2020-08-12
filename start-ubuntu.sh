@@ -5,7 +5,7 @@ unset LD_PRELOAD
 command="./proot"
 command+=" --link2symlink"
 ##Assuming that ubuntu rootfs is extracted into ./ubuntu
-command+=" -0 -r ubuntu"
+command+=" -S ubuntu"
 command+=' -b /sys'
 command+=' -b /dev'
 command+=' -b /proc'
