@@ -3,7 +3,7 @@ cd $(dirname $0)
 unset LD_PRELOAD
 ##Assuming that proot is aloneside the proot binary file.
 command="./proot"
-#command+=" --link2symlink"
+command+=" --link2symlink"
 ##Assuming that ubuntu rootfs is extracted into ./ubuntu
 command+=" -S ubuntu"
 ##Seems that it's unnecessary
