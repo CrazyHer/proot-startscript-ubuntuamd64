@@ -1,8 +1,8 @@
 #!/bin/bash
 cd $(dirname $0)
 unset LD_PRELOAD
-##Assuming that proot is already in PATH
-command="proot"
+##Assuming that this script is aloneside the proot binary file.
+command="./proot"
 command+=" --link2symlink"
 ##Assuming that ubuntu rootfs is extracted into ./ubuntu
 command+=" -S ubuntu"
