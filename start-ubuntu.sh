@@ -7,8 +7,7 @@ command="./proot"
 #command+=" --link2symlink"
 ##Assuming that ubuntu rootfs is extracted into ./ubuntu
 command+=" -S ubuntu"
-##Seems that it's unnecessary
-#command+=' -b /sys'
+command+=' -b /sys'
 command+=' -b /dev'
 command+=' -b /proc'
 command+=" -w /root"
