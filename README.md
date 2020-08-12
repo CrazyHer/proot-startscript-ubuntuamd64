@@ -6,4 +6,4 @@ https://mirrors.tuna.tsinghua.edu.cn/lxc-images/images/ubuntu/
 
 # When you untar rootfs.tar.xz ....
 ```shell
-./proot --link2symlink tar -xpf ubuntu.tar.xz -C ubuntu
+./proot --link2symlink tar -xpf ubuntu.tar.xz -C ubuntu/
