@@ -1,12 +1,13 @@
 #!/bin/bash
 cd $(dirname $0)
 unset LD_PRELOAD
-##Assuming that this script is aloneside the proot binary file.
+##Assuming that proot is aloneside the proot binary file.
 command="./proot"
-command+=" --link2symlink"
+#command+=" --link2symlink"
 ##Assuming that ubuntu rootfs is extracted into ./ubuntu
 command+=" -S ubuntu"
-command+=' -b /sys'
+##Seems that it's unnecessary
+#command+=' -b /sys'
 command+=' -b /dev'
 command+=' -b /proc'
 command+=" -w /root"
