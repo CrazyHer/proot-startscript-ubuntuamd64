@@ -1,17 +1,14 @@
 #!/bin/bash
 cd $(dirname $0)
-## unset LD_PRELOAD in case termux-exec is installed
 unset LD_PRELOAD
+##Assuming that proot is already in PATH
 command="proot"
 command+=" --link2symlink"
+##Assuming that ubuntu rootfs is extracted into ./ubuntu
 command+=" -S ubuntu"
 command+=' -b /sys'
 command+=' -b /dev'
 command+=' -b /proc'
-## uncomment the following line to have access to the home directory of termux
-#command+=" -b /data/data/com.termux/files/home:/root"
-## uncomment the following line to mount /sdcard directly to / 
-#command+=" -b /sdcard"
 command+=" -w /root"
 command+=" /usr/bin/env -i"
 command+=" HOME=/root"
